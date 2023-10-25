@@ -8,7 +8,7 @@ import { MatTableDataSource, MatTableDataSourcePaginator } from '@angular/materi
   styleUrls: ['./tecnico-read.component.css']
 })
 export class TecnicoReadComponent implements AfterViewInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['id', 'nome', 'cpf', 'telefone'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator! : MatTableDataSourcePaginator;
