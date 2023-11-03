@@ -6,17 +6,26 @@
                 <i class="material-icons">home</i>Home
             </a>
 
-            <a mat-list-item routerLink="/tecnicos">
+            <a mat-list-item routerLink="tecnicos">
                 <i class="material-icons">work</i>Tecnico
             </a>
 
-            <a mat-list-item routerLink="/">
+            <a mat-list-item routerLink="clientes">
                 <i class="material-icons">perm_contact_calendar</i>cliente
             </a>
 
-            <a mat-list-item routerLink="/">
-                <i class="material-icons">person_pin</i>Ordem de Sercico
-            </a>
+            <a mat-list-item [matMenuTriggerFor]="menu">
+                <mat-menu #menu="matMenu">
+
+                    <a routerLink="os" mat-menu-item>
+                        Abertos ou em Andamento
+                    </a>
+                    <a routerLink="os/closed" mat-menu-item>
+                        Encerradas
+                    </a>
+
+                </mat-menu>
+                <i class="material-icons">person_pin</i>Ordem de Sercico </a>
 
         </mat-nav-list>
     </mat-drawer>
@@ -24,7 +33,7 @@
     <div class="sidenav-content">
         <button type="button" mat-button (click)="drawer.toggle()">
             <mat-icon>more_vert</mat-icon>
-      </button>
+        </button>
         <router-outlet></router-outlet>
     </div>
 
