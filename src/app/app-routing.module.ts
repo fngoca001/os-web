@@ -66,8 +66,8 @@ const routes: Routes = [
     component: OsCreateComponent
   },
   {
-    path: 'os/create',
-    component: OsCreateComponent
+    path: 'os/update/:id',
+    component: OsUpdateComponent
   },
   {
     path: 'os/view/:id',
